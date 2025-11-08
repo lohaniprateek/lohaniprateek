@@ -1,3 +1,4 @@
+
 name: Generate Snake Animation
 
 on:
@@ -19,18 +20,19 @@ jobs:
           github_user_name: lohaniprateek
           outputs: dist/github-contribution-grid-snake-dark.svg
           palette: |
-            background: "#0d1117"   # GitHub dark background
-            snake: "#2aff00"        # Neon green snake
-            apple: "#ff073a"        # Red apples
-            head: "#00ffcc"         # Turquoise head
+            background: "#0d1117"
+            snake: "#2aff00"
+            apple: "#ff073a"
+            head: "#00ffcc"
             color_0: "#161b22"
             color_1: "#0d1117"
             color_2: "#1b1f23"
             color_3: "#238636"
             color_4: "#39d353"
 
-      - name: Force opaque background (prevent transparency)
+      - name: Make SVG writable and force dark background
         run: |
+          chmod +w dist/github-contribution-grid-snake-dark.svg
           sed -i 's/fill="none"/fill="#0d1117"/g' dist/github-contribution-grid-snake-dark.svg
 
       - name: Push to output branch
