@@ -1,4 +1,5 @@
 name: Generate Snake Animation
+
 on:
   schedule:
     - cron: "0 0 * * *"
@@ -10,22 +11,27 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Generate dark snake SVG only
+      - name: Generate dark snake SVG (GitHub dark palette)
         uses: Platane/snk@v3
-        with:    
+        with:
           github_user_name: lohaniprateek
           outputs: dist/github-contribution-grid-snake-dark.svg
           palette: |
-            background: "#000000"
-            snake: "#39FF14"
-            apple: "#ff073a"
-            head: "#00ffcc"
+            background: "#0d1117"   # GitHub dark background
+            snake: "#2aff00"        # Neon green snake
+            apple: "#ff073a"        # Red apples
+            head: "#00ffcc"         # Turquoise head
             color_0: "#161b22"
             color_1: "#0d1117"
-            color_2: "#21262d"
-            color_3: "#30363d"
-            color_4: "#58a6ff"
+            color_2: "#1b1f23"
+            color_3: "#238636"
+            color_4: "#39d353"
+
+      - name: Force opaque background (prevent transparency)
+        run: |
+          sed -i 's/fill="none"/fill="#0d1117"/g' dist/github-contribution-grid-snake-dark.svg
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
