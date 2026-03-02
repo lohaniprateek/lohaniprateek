@@ -28,7 +28,8 @@ Languages    := []string{"Go", "Bash", "Python", "SQL"}
 
 // ---- EXPERIENCE ----
 
-QappaLabs := "Built Terraform-based infra sync system to detect & reconcile manual cloud drift"
+QappaLabs := "Built Terraform-based infra sync system to
+		 	  detect & reconcile manual cloud drift"
 
 Projects := []string{
 	"Jenkins CI/CD pipeline with Docker-in-Docker",
