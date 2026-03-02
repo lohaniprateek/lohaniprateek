@@ -2,7 +2,7 @@
   <img alt="github-snake" src="https://raw.githubusercontent.com/lohaniprateek/lohaniprateek/output/github-contribution-grid-snake-dark.svg" style="width: 100%;" />
 </p>
 
-<img src="https://avatars.githubusercontent.com/u/151424017?v=4" width="150" align="left"/>
+<img src="https://raw.githubusercontent.com/lohaniprateek/lohaniprateek/refs/heads/main/assets/GitHub_readme_1.jpg" width="150" align="left"/>
 
 ```go
 // ---------------------------------------------------
